@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'nav' 'main' 'footer';
+    grid-template-rows: 1fr 12fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    background-color: #778da9;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #415a77;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    height: 100%;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #e0e1dd;
+    margin-right: 40%;
+}
+
+.brand a {
+    text-decoration: none;
+    color: #e0e1dd;
+}
+
+.brand img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+main {
+    grid-area: main;
+    background-color: #778da9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: scroll;
+    gap: 2em;
+    padding: 1em;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: #e0e1dd;
+    transition: all 1s;
+    filter: grayscale(1);
+}
+
+.card img {
+    height: 5em;
+    width: 5em;
+}
+
+.card:hover {
+    filter: grayscale(0);
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #415a77;
+    color: #e0e1dd;
+    padding: 1em;
+}
+
+.rrss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rrss a{
+    text-decoration: none;
+    color: #e0e1dd;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width:576px) {
+    .container {
+        grid-template-areas: 'nav main' 'nav main' 'footer main';
+        grid-template-columns: 10em 1fr;
+    }
+
+    .brand {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        height: 15em;
+    }
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
