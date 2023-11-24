@@ -12,7 +12,7 @@ body {
     display: grid;
     grid-template-areas: 'nav' 'main' 'footer';
     grid-template-rows: 1fr 12fr 1fr;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: #778da9;
 }
@@ -32,9 +32,9 @@ nav {
 .brand {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
+    min-width: 100%;
     color: #e0e1dd;
     margin-right: 40%;
 }
@@ -85,7 +85,7 @@ main::-webkit-scrollbar {
 
 .card:hover {
     filter: grayscale(0);
-    transform: scale(1.5);
+    transform: scale(1.2);
     z-index: 1;
 }
 
